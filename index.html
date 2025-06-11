@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MidniteFox Prompts</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0f0f0f;
+      color: #f1f1f1;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #ff4fd8;
+    }
+
+    .prompt {
+      background-color: #1c1c1c;
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 10px rgba(255, 79, 216, 0.1);
+      position: relative;
+    }
+
+    .prompt h2 {
+      margin-top: 0;
+      color: #ff93e1;
+    }
+
+    .prompt pre {
+      white-space: pre-wrap;
+      word-break: break-word;
+      background-color: #2a2a2a;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+
+    button.copy-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background-color: #ff4fd8;
+      color: #fff;
+      border: none;
+      padding: 0.3rem 0.7rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    button.copy-btn:hover {
+      background-color: #d93dbf;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🦊 MidniteFox Prompt Portfolio</h1>
+
+  <div class="prompt">
+    <h2>📱 Phone Repair Lead Generator (uBreakiFix)</h2>
+    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+    <pre>
+You are an expert assistant helping uBreakiFix by Asurion generate high-converting local leads. Their phone repair shop is located at 5111 Market St, Suite 2, Wilmington, NC 28405. The phone number is 910-800-2855. Generate engaging ad text, emails, or landing pages targeting people with cracked screens, slow phones, or water damage.
+    </pre>
+  </div>
+
+  <div class="prompt">
+    <h2>📸 Visual Prompt for SwarmAI (Character Creation)</h2>
+    <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+    <pre>
+Create a high-quality character inspired by Loona from Helluva Boss, but make it original. White fur, neon highlights, futuristic punk armor, and glowing red eyes. Background should be a neon-lit cyberpunk alley. The style should be cinematic and 3D-rendered, with shallow depth of field.
+    </pre>
+  </div>
+
+  <footer>
+    &copy; 2025 MidniteFox – Crafted with 🧠 + 🔥
+  </footer>
+
+  <script>
+    function copyPrompt(button) {
+      const text = button.nextElementSibling.innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        button.innerText = 'Copied!';
+        setTimeout(() => (button.innerText = 'Copy'), 1500);
+      });
+    }
+  </script>
+
+</body>
+</html>
